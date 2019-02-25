@@ -1,0 +1,44 @@
+<h2>Cunsultar Credencial</h2>
+<div ng-controller="CredencialController">
+    <div class="row">
+        <div class="col-md-10">
+            <div class="form-group">
+                <div class="input-group ">
+                    <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                    <input type="text" class="form-control" placeholder="Consultar Credencial" ng-model="searchCredencial" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <a class="btn btn-primary" ng-href="/#/credencial/create"><i class="fa fa-plus-circle"></i> Criar Credencial</a>
+        </div>
+        </div>
+
+    <table class="table table-striped credenciais">
+        <thead>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Ações</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="credencial in credenciais | orderBy: '-ativo' | filter:{nome : searchCredencial}">
+                <td><span tooltip="{{credencial.usuario}}">{{credencial.nome}}</span></td>
+                <td>{{credencial.usuario}}</td>
+                <td>
+                    <ul class="list-inline actions">
+                        <li><button class="btn btn-xs" ng-click="activate(credencial)"><i class="fa" ng-class="credencial.ativo == 1 ? 'fa-check-circle' : 'fa-check-circle-o'"></i></button></li>
+                        <li><button class="btn btn-xs" ng-click="edit(credencial)"><i class="fa fa-pencil-square-o"></i></button></li>
+                        <li><button class="btn btn-xs" ng-click="delete(credencial)"><i class="fa fa-times-circle"></i></button></li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Ações</th>
+        </tfoot>
+    </table>
+
+    <div></div>
+</div>

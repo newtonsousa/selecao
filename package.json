@@ -1,0 +1,23 @@
+{
+  "name": "relsiafi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "author": "Fábio Luciano",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-bower": "latest",
+    "gulp-notify" : "latest",
+    "gulp-jshint": "latest",
+    "gulp-concat": "latest",
+    "rimraf" : "latest",
+    "gulp-uglify": "latest",
+    "gulp-less": "latest",
+    "less-plugin-clean-css": "latest",
+    "gulp-csslint": "latest",
+    "colors" : "latest",
+    "jshint-stylish" : "latest",
+    "gulp-watch" :  "latest"
+  }
+}

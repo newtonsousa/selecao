@@ -1,0 +1,15 @@
+{
+  "name": "RELSIAFI",
+  "dependencies": {
+    "angular-animate": "latest",
+    "angular-bootstrap": "latest",
+    "angular-flash-alert": "latest",
+    "angular-loading-bar": "latest",
+    "angular-resource": "latest",
+    "angular-route": "latest",
+    "angular-ui-mask": "latest",
+    "bootswatch-dist": "simplex",
+    "fontawesome": "latest",
+    "ng-camera": "latest"
+  }
+}
