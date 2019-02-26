@@ -1,7 +1,8 @@
-<div >
+<br /><br />
+<div>
     <form class="form-horizontal" name="CreateVisitanteForm" id="CreateVisitanteForm" novalidate>
-        <fieldset>
-            <legend>Visitante</legend>
+        <fieldset id="contactform">
+            <h4><strong>VISITANTE</strong></h4><hr>
             <div class="form-group">        
                 <label for="STR_NOME" class="col-lg-2 control-label">Nome</label>
                 <div class="col-lg-4">
@@ -33,7 +34,7 @@
                 
                 <label for="INT_CRACHA" class="col-lg-2 control-label">Crachá</label>
                 <div class="col-lg-2">
-                    <input class="form-control" name="INT_CRACHA" type="number" id="INT_CRACHA" ng-model="visitante.INT_CRACHA"  />
+                    <input class="form-control" name="INT_CRACHA" type="text" id="INT_CRACHA" ng-model="historico.INT_CRACHA" ng-required="true" />
                 </div>                
             </div>  
                            
@@ -59,7 +60,7 @@
                <div ng-if=" visitante.INT_TIPO_DOCUMENTO != '3' ">
                     <label for="INT_NUMERO_DOCUMENTO" class="col-lg-1 control-label">Número</label>
                     <div class="col-lg-2">
-                        <input class="form-control" name="INT_NUMERO_DOCUMENTO" type="number" id="INT_NUMERO_DOCUMENTO" ng-model="visitante.INT_NUMERO_DOCUMENTO" maxlength="15" ng-required="true" />
+                        <input class="form-control" name="INT_NUMERO_DOCUMENTO" type="text" id="INT_NUMERO_DOCUMENTO" ng-model="visitante.INT_NUMERO_DOCUMENTO" maxlength="15" ng-required="true" />
                     </div>
                 </div>
                 
@@ -74,25 +75,25 @@
             </div>                  
         </fieldset>
   
-        <fieldset>
-            <legend>Destino</legend>
+        <fieldset id="contactform">
+            <h4><strong>DESTINO</strong></h4><hr>
             <label for="STR_NOME" class="col-lg-1 control-label">Pessoa/Destino</label>
             <div class="col-lg-2">                          
-                <select class="form-control" name="STR_NOME" id="STR_NOME" ng-required="true" ng-required="true"  ng-model="historico2" ng-change="onSelectedPessoaDestinoChange()" ng-options="pessoa as pessoa.no_user for pessoa in pessoaDestino | orderBy: 'no_user'"  >
+                <select class="form-control" name="STR_NOME" id="STR_NOME" ng-model="historico2" ng-change="onSelectedPessoaDestinoChange()" ng-options="pessoa as pessoa.no_user for pessoa in pessoaDestino | orderBy: 'no_user'"  >
 
                 </select>
             </div>
             
-            <label for="STR_SETOR" class="col-lg-1 control-label">Setor</label>
+            <label for="STR_SETOR" class="col-lg-1 control-label">Setor destino</label>
             <div class="col-lg-2">                          
-                <select class="form-control" name="STR_SETOR" id="STR_SETOR" ng-required="true" ng-model="historico.STR_SETOR" ng-change="onSelectedSetorChange(option)">
+                <select class="form-control" name="STR_SETOR" id="STR_SETOR" ng-model="historico.STR_SETOR" ng-change="onSelectedSetorChange(option)">
                         <option ng-repeat="option in pessoaSetor" value="{{option.no_acronym}}">{{option.no_acronym}}</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="STR_EVENTO" class="col-lg-2 control-label">Evento</label>
+                <label for="STR_EVENTO" class="col-lg-2 control-label">Outro destino</label>
                 <div class="col-lg-4">
-                    <textarea rows="4" cols="50" id="STR_EVENTO" name="STR_EVENTO" ng-model="historico.STR_EVENTO">
+                    <textarea rows="6" cols="46" id="STR_EVENTO" name="STR_EVENTO" ng-model="historico.STR_EVENTO">
                        
                     </textarea> 
                 </div>
@@ -102,7 +103,6 @@
             <div style="float:left; width: 30%">
                 <ng-camera
                     capture-message="Imagem capturada!"
-                    countdown="2"
                     output-height="160"
                     output-width="213"
                     viewer-height="320"
@@ -120,14 +120,14 @@
             <div style="float:right; width: 70%">
                 <img ng-if="vm.picture" src="{{vm.picture}}" height="160" width="200" alt="webcam" >
             </div>
-            <input class="form-control" name="IMAGEM" type="hidden" id="IMAGEM" ng-model="vm.picture" value="{{vm.picture}}"  />
+           
             <br /><br /><br /><br /><br />          
         </fieldset>
     </form>
 
-    <div class="form-group">
+    <div class="form-group" id="contactform">
         <div class="col-lg-10 col-lg-offset-2">
-            <button type="submit" class="btn btn-primary" ng-disabled="CreateVisitanteForm.$invalid" ng-click="create()">Gravar Entrada</button>
+            <button type="submit" class="btn btn-success" ng-disabled="CreateVisitanteForm.$invalid" ng-click="create()">Gravar Entrada</button>
             <a href="#/visitante" class="btn btn-default">Voltar</a>
         </div>
     </div>

@@ -5,10 +5,12 @@
     "angular-bootstrap": "latest",
     "angular-flash-alert": "latest",
     "angular-loading-bar": "latest",
+    "angular-i18n": "latest",
     "angular-resource": "latest",
     "angular-route": "latest",
     "angular-ui-mask": "latest",
-    "bootswatch-dist": "simplex",
+    "angular-cookies": "latest",
+    "bootswatch-dist": "lumen",
     "fontawesome": "latest",
     "ng-camera": "latest"
   }

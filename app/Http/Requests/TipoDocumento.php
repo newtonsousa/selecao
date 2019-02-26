@@ -1,8 +1,8 @@
 <?php
 
-namespace cadvisitante\Http\Requests;
+namespace selecao\Http\Requests;
 
-use cadvisitante\Http\Requests\Request;
+use selecao\Http\Requests\Request;
 
 class TipoDocumento extends Request
 {

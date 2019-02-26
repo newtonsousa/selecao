@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'model' => cadvisitante\User::class,
+    'model' => selecao\User::class,
 
     /*
     |--------------------------------------------------------------------------

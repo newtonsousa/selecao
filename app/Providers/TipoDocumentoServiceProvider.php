@@ -1,8 +1,8 @@
-<?php namespace cadvisitante\Providers;
+<?php namespace selecao\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use \cadvisitante\Models\TipoDocumento as TipoDocumentoModel;
-use \cadvisitante\Models\Observers\TipoDocumento as TipoDocumentoObserver;
+use \selecao\Models\TipoDocumento as TipoDocumentoModel;
+use \selecao\Models\Observers\TipoDocumento as TipoDocumentoObserver;
 
 class TipoDocumentoServiceProvider extends ServiceProvider {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace cadvisitante\Providers;
+namespace selecao\Providers;
 
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -14,7 +14,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'cadvisitante\Http\Controllers';
+    protected $namespace = 'selecao\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.

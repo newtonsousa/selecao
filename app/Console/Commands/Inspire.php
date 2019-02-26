@@ -1,6 +1,6 @@
 <?php
 
-namespace cadvisitante\Console\Commands;
+namespace selecao\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Inspiring;

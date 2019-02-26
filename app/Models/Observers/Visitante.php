@@ -1,9 +1,9 @@
 <?php
 
-namespace cadvisitante\Models\Observers;
+namespace selecao\Models\Observers;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
-use cadvisitante\Models\Visitante as VisitanteModel;
+use selecao\Models\Visitante as VisitanteModel;
 
 class Visitante
 {

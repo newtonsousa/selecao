@@ -1,10 +1,10 @@
 <?php
 
-namespace cadvisitante\Http\Controllers\Auth;
+namespace selecao\Http\Controllers\Auth;
 
-use cadvisitante\User;
+use selecao\User;
 use Validator;
-use cadvisitante\Http\Controllers\Controller;
+use selecao\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 

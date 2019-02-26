@@ -1,8 +1,8 @@
 <?php
 
-namespace cadvisitante\Http\Requests;
+namespace selecao\Http\Requests;
 
-use cadvisitante\Http\Requests\Request;
+use selecao\Http\Requests\Request;
 
 class Visitante extends Request
 {
@@ -24,9 +24,9 @@ class Visitante extends Request
     public function rules()
     {
         return [
-            'STR_NOME'            => 'required|max:200',
-//            'INT_TIPO_DOCUMENTO'  => 'required',
-//            'INT_NUMERO_DOCUMENTO'  => 'required'
+            //'str_nome'            => 'required|max:200',
+//             'int_tipo_documento'  => 'required',
+//             'int_numero_documento'  => 'required'
             
         ];
     }

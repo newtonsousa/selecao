@@ -1,17 +1,17 @@
 <?php
 
-namespace cadvisitante\Http\Controllers;
+namespace selecao\Http\Controllers;
 
 use Illuminate\Http\Request;
-use cadvisitante\Http\Requests;
+use selecao\Http\Requests;
 
-use cadvisitante\Http\Controllers\Controller;
+use selecao\Http\Controllers\Controller;
 use \Config as Config;
 use \Validator as Validator;
 
-use cadvisitante\Http\Requests\Setor as SetorRequest;
-use cadvisitante\Models\LDAP\User as LDAPUser;
-use cadvisitante\Models\Setor as SetorModel;
+use selecao\Http\Requests\Setor as SetorRequest;
+use selecao\Models\LDAP\User as LDAPUser;
+use selecao\Models\Setor as SetorModel;
 
 class Setor extends Controller
 {
@@ -46,7 +46,7 @@ class Setor extends Controller
     public function store(SetorRequest $request)
     {
        
-        $setor = SetorModel::where('STR_NOME', $request->input('STR_NOME'));
+        $setor = SetorModel::where('str_nome', $request->input('str_nome'));
 
         if($setor->count() === 0){
 

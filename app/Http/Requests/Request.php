@@ -1,6 +1,6 @@
 <?php
 
-namespace cadvisitante\Http\Requests;
+namespace selecao\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

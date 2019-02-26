@@ -49,7 +49,7 @@ return [
         'mysql' => [
             'driver'    => 'mysql',
             'host'      => env('DB_HOST', 'localhost'),
-            'database'  => env('DB_DATABASE', 'dbm_cadastro'),
+            'database'  => env('DB_DATABASE', 'dbm_cadastro'), 
             'username'  => env('DB_USERNAME', 'root'),
             'password'  => env('DB_PASSWORD', 'root'),
             'charset'   => 'utf8',
@@ -59,35 +59,33 @@ return [
         ],
         
         //conecao com o postgres
-        'postgres' => [
-            'driver'    => 'pgsql',
-            'port'      => '5432',
-            'host'      => 'postgresqld',
-            'database'  => 'dbp_extranet',
-            'username'  => '',
-            'password'  => '',
-            'charset'   => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix'    => '',
-            'strict'    => false,
-        ],
+//         'postgres' => [
+//             'driver'    => 'pgsql',
+//             'port'      => '5432',
+//             'host'      => 'postgresqld',
+//             'database'  => 'dbp_extranet',
+//             'username'  => '',
+//             'password'  => '',
+//             'charset'   => 'utf8',
+//             'collation' => 'utf8_unicode_ci',
+//             'prefix'    => '',
+//             'strict'    => false,
+//         ],
         
         
         //conexao com o oracle 
-        'oracle' => [
-            'driver' => 'pdo-via-oci8',
-            'host' => '',
-            'port' => '1521',
-            'database' => '',
-            'service_name' => '',
-            'username' => '', 
-            'password' => '',
-            'charset' => 'UTF8',
-            'prefix' => '',
-            'strict'    => false,
-        ],
-        
-        
+//         'oracle' => [
+//             'driver' => 'pdo-via-oci8',
+//             'host' => '10.216.1.162, 10.216.1.163',
+//             'port' => '1521',
+//             'database' => 'MIDEV',
+//             'service_name' => 'MIDEV',
+//             'username' => '', 
+//             'password' => '',
+//             'charset' => 'UTF8',
+//             'prefix' => '',
+//             'strict'    => false,
+//         ],
         
     ],
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace cadvisitante\Providers;
+namespace selecao\Providers;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'cadvisitante\Events\SomeEvent' => [
-            'cadvisitante\Listeners\EventListener',
+        'selecao\Events\SomeEvent' => [
+            'selecao\Listeners\EventListener',
         ],
     ];
 

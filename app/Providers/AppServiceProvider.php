@@ -1,6 +1,6 @@
 <?php
 
-namespace cadvisitante\Providers;
+namespace selecao\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

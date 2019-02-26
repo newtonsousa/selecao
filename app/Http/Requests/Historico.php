@@ -1,8 +1,8 @@
 <?php
 
-namespace cadvisitante\Http\Requests;
+namespace selecao\Http\Requests;
 
-use cadvisitante\Http\Requests\Request;
+use selecao\Http\Requests\Request;
 
 class Historico extends Request
 {
@@ -24,8 +24,8 @@ class Historico extends Request
     public function rules()
     {
         return [
-           // 'STR_NOME'     => 'required|max:200'
-           /* 'STR_TIPO_DOCUMENTO'       => 'required|max:50',
+           /* 'STR_NOME'     => 'required|max:200'
+            'STR_TIPO_DOCUMENTO'       => 'required|max:50',
             'STR_ENDERECO' => 'required',
             'STR_EMPRESA_ORGAO'      => 'required|max:200',
             'INT_NUMERO_DOCUMENTO'      => 'required|max:11',

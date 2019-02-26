@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'url' => 'http://relsiafi',
+    'url' => 'http://visitante',
 
     /*
     |--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Sao_Paulo',
 
     /*
     |--------------------------------------------------------------------------
@@ -146,10 +146,16 @@ return [
         /*
          * Application Service Providers...
          */
-        cadvisitante\Providers\AppServiceProvider::class,
-        cadvisitante\Providers\EventServiceProvider::class,
-        cadvisitante\Providers\RouteServiceProvider::class,
+        selecao\Providers\AppServiceProvider::class,
+        selecao\Providers\EventServiceProvider::class,
+        selecao\Providers\RouteServiceProvider::class,
         yajra\Oci8\Oci8ServiceProvider::class,
+        
+
+        /**
+         * Third Service Provider
+         */
+
                
         /*
         * Snappy PDF

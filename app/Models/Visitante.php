@@ -1,6 +1,6 @@
 <?php
 
-namespace cadvisitante\Models;
+namespace selecao\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -62,10 +62,10 @@ class Visitante extends Model
 
     }
     
-    public function getDtSaidaAttribute($value) {
-        $value = date('U', strtotime($value));
-        return $value * 1000;
-    }
+//    public function getDtSaidaAttribute($value) {
+//        $value = date('U', strtotime($value));
+//        return $value * 1000;
+//    }
     
     public function getCreatedAtAttribute($value) {
         $value = date('U', strtotime($value));

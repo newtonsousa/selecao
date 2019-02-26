@@ -1,6 +1,6 @@
 <?php
 
-namespace cadvisitante;
+namespace selecao;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -32,4 +32,14 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+    
+    /**
+    * Passwords must always be hashed
+    *
+    * @param $password
+    */
+    public function setPasswordAttribute($password)
+    {
+            $this->attributes['password'] = Hash::make($password);
+    }
 }

@@ -107,10 +107,10 @@ return [
         | these permissions.
         |
         */
-        // 'admin_username' => 'sga',
-        // 'admin_password' => 'coinf2004',
-        'admin_username' => 'fabio.gois',
-        'admin_password' => 'r767xlt7',
+         //'admin_username' => 'sga',
+         //'admin_password' => 'coinf2004',
+        'admin_username' => 'newton.portilho',
+        'admin_password' => 'Tereza45',
 
         /*
         |--------------------------------------------------------------------------

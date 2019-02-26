@@ -1,6 +1,6 @@
 <?php
 
-namespace cadvisitante\Models;
+namespace selecao\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

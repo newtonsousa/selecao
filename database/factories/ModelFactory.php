@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(cadvisitante\User::class, function ($faker) {
+$factory->define(selecao\User::class, function ($faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->email,

@@ -1,16 +1,16 @@
 <?php
 
-namespace cadvisitante\Http\Controllers;
+namespace selecao\Http\Controllers;
 
 use Illuminate\Http\Request;
-use cadvisitante\Http\Requests;
+use selecao\Http\Requests;
 
-use cadvisitante\Http\Controllers\Controller;
+use selecao\Http\Controllers\Controller;
 use \Config as Config;
 use \Validator as Validator;
 
-use cadvisitante\Http\Requests\TipoDocumento as TipoDocumentoRequest;
-use cadvisitante\Models\TipoDocumento as TipoDocumentoModel;
+use selecao\Http\Requests\TipoDocumento as TipoDocumentoRequest;
+use selecao\Models\TipoDocumento as TipoDocumentoModel;
 
 class TipoDocumento extends Controller
 {
@@ -45,7 +45,7 @@ class TipoDocumento extends Controller
     public function store(TipoDocumentoRequest $request)
     {
        
-        $tipoDocumento = TipoDocumentoModel::where('STR_TIPO_DOCUMENTO', $request->input('STR_TIPO_DOCUMENTO'));
+        $tipoDocumento = TipoDocumentoModel::where('str_tipo_documento', $request->input('str_tipo_documento'));
 
         if($tipoDocumento->count() === 0){
 
@@ -127,10 +127,6 @@ class TipoDocumento extends Controller
     {
         //
     }   
-    
-    public function getAllSetor() {
-        //return json_encode(TipoDocumento::select('*')->toArray());
-    }
-    
+
     
 }

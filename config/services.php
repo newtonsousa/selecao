@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model'  => cadvisitante\User::class,
+        'model'  => selecao\User::class,
         'key'    => '',
         'secret' => '',
     ],

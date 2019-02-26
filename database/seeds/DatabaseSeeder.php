@@ -12,11 +12,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Model::unguard();
-
-        $this->call('ExtracaoTableSeeder');
-        $this->call('TipoArquivoTableSeeder');
-
-        Model::reguard();
+//        Model::unguard();
+//
+//        $this->call('ExtracaoTableSeeder');
+//        $this->call('TipoArquivoTableSeeder');
+//
+//        Model::reguard();
+        
+        
+        Eloquent::unguard();
+ 
+        $this->call('User');
+        
+        
     }
 }

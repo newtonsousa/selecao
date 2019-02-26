@@ -1,6 +1,6 @@
 <?php
 
-namespace cadvisitante\Events;
+namespace selecao\Events;
 
 abstract class Event
 {

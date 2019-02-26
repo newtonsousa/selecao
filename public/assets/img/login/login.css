@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+/*----- Reset - Estrutura -----*/
+html, body {margin: 0px; padding: 0px; border: 0; height:100%;}
+
+
+
+.wrapper {margin:0px auto; width: 87%;}
+
+.alertas {
+	background:#9c3e3e; position:absolute; left:100px; width:334px; list-style:none;
+	color:white; padding: 10px; font-size: 12px;
+	background: #9c3e3e;
+	background: -moz-linear-gradient(top,  #9c3e3e 1%, #9B5555 93%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#9c3e3e), color-stop(93%,#9B5555));
+	background: -webkit-linear-gradient(top,  #9c3e3e 1%,#9B5555 93%);
+	background: -o-linear-gradient(top,  #9c3e3e 1%,#9B5555 93%);
+	background: -ms-linear-gradient(top,  #9c3e3e 1%,#9B5555 93%);
+	background: linear-gradient(to bottom,  #9c3e3e 1%,#9B5555 93%);
+}
+
+/*----- Header -----*/
+/*
+#bgBoard {background:url("../../img/login/bgTop.jpg") repeat-x; height:28px; width:100%; }
+#bgBoard .wrapper img {float:right; margin: 4px 0 0 0;}
+.subBgBoard 		  {background:url(../../img/login/bgTextura.jpg) repeat-x; height:24px; width:100%; }
+
+.logo img 		 {top:20%; left:100px; position: absolute;}
+*/
+
+/*----- Form /Login -----*/
+#sign-in { height:auto; position: absolute; top:30%; left: 100px; opacity: 0.8;}
+#sign-in.borda {background:url(../../img/login/bgBorder.png); padding:10px; border-radius:5px; }
+
+#sign-in .content 	 {background:#FFF; padding:30px 20px 5px 20px; float:left; width:280px}
+#sign-in .content h2 {float:left; margin:0 0 35px 0; padding:0 0 10px 0; border-bottom: solid 1px #dddddd; font-size:15px; color:#054a86; width:100%; }
+
+#sign-in .content a  	 {float: left; font-size: 12px; margin: 0 0 5px 0; text-decoration: none; color: #818181}
+#sign-in .content a.bold {font-weight: bold}
+
+#sign-in .content a:hover {text-decoration: underline!important; }
+
+#sign-in .content input {
+	border: 1px solid #d9d9d9; border-top: 1px solid #c0c0c0; padding:9px 35px 9px 10px; width:235px; float:left;  color:#636363;
+	box-shadow:none; border-radius:0px; margin:0 0 10px 0; font-size: 12px;}
+	
+@media screen and (-webkit-min-device-pixel-ratio:0) {  
+  /* CSS Statements that only apply on webkit-based browsers (Chrome, Safari, etc.) */  
+  #sign-in .content input {width: 290;}
+}
+	
+	#sign-in .content input:hover {-moz-box-shadow: inset 0 1px 5px -5px #000;
+								  -webkit-box-shadow: inset 0 1px 5px -5px #000;
+								   box-shadow: inset 0 1px 8px -5px #000;}
+								   
+	#sign-in .content input:focus {border: solid 1px #c0c0c0!important; -moz-box-shadow: inset 0 1px 5px -5px #000;
+								  -webkit-box-shadow: inset 0 1px 5px -5px #000; box-shadow: inset 0 1px 8px -5px #000;}				
+
+#sign-in .content input[type="text"]	 {background:url(../../img/login/icoUser.gif) right no-repeat;}
+#sign-in .content input[type="password"] {background:url(../../img/login/icoPass.gif) right no-repeat;}
+
+#sign-in .content .wrapperBt 	{float: left; width: 95%; padding:10px 0px;}
+
+#sign-in .content button .ui-button-text {color: white}
+
+#sign-in .content button {
+	background:#198d47; border:solid 1px #7d9285; border-radius:3px; color:white; font-size:11px; padding:3px 17px;
+	-moz-box-shadow:inset 0px 1px 0px #4faf75; -webkit-box-shadow:inset 0px 1px 0px #4faf75; box-shadow:inset 0px 1px 0px #4faf75; text-shadow: none
+}
+
+#sign-in .content button:hover {background:#1d9e50 }
+
+#sign-in .content button .ui-icon {background-image: url(../../img/login/icoBt.png)!important;}
+
+.ui-button-text-icon-left .ui-button-text {
+padding: 5px 0 5px 17px; }
+
+
+
+/*----- Footer -----*/
+/* #bgFooter {background:url('../../img/login/bgFooter.jpg') repeat-x; height: 21px; font-size: 11px; padding: 22px 0 0 0; width: 100%; position:absolute; bottom:0px; } */

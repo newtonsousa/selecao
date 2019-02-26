@@ -1,6 +1,6 @@
 <?php
 
-namespace cadvisitante\Jobs;
+namespace selecao\Jobs;
 
 use Illuminate\Bus\Queueable;
 

@@ -1,8 +1,8 @@
-<?php namespace cadvisitante\Providers;
+<?php namespace selecao\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use \cadvisitante\Models\Setor as SetorModel;
-use \cadvisitante\Models\Observers\Setor as SetorObserver;
+use \selecao\Models\Setor as SetorModel;
+use \selecao\Models\Observers\Setor as SetorObserver;
 
 class SetorServiceProvider extends ServiceProvider {
 

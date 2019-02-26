@@ -1,9 +1,9 @@
 <?php
 
-namespace cadvisitante\Models\Observers;
+namespace selecao\Models\Observers;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
-use cadvisitante\Models\Setor as SetorModel;
+use selecao\Models\Setor as SetorModel;
 
 class Setor
 {

@@ -1,8 +1,8 @@
-<?php namespace cadvisitante\Providers;
+<?php namespace selecao\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use \cadvisitante\Models\Historico as HistoricoModel;
-use \cadvisitante\Models\Observers\Historico as HistoricoObserver;
+use \selecao\Models\Historico as HistoricoModel;
+use \selecao\Models\Observers\Historico as HistoricoObserver;
 
 class HistoricoServiceProvider extends ServiceProvider {
 

@@ -1,16 +1,16 @@
 <?php
 
-namespace cadvisitante\Http\Controllers;
+namespace selecao\Http\Controllers;
 
 use Illuminate\Http\Request;
-use cadvisitante\Http\Requests;
+use selecao\Http\Requests;
 
-use cadvisitante\Http\Controllers\Controller;
+use selecao\Http\Controllers\Controller;
 use \Config as Config;
 use \Validator as Validator;
 
-use cadvisitante\Http\Requests\Historico as HistoricoRequest;
-use cadvisitante\Models\Historico as HistoricoModel;
+use selecao\Http\Requests\Historico as HistoricoRequest;
+use selecao\Models\Historico as HistoricoModel;
 
 
 class Historico extends Controller
@@ -49,33 +49,35 @@ class Historico extends Controller
      */
 
     public function store(HistoricoRequest $request)
-    {  
-        $historico = HistoricoModel::where('id', $request->input('id'));
-        if($historico->count() === 0){
-
-            try {
-                $historico = new HistoricoModel;
-                $historico->STR_NOME      = 'teste';//$request->input('STR_NOME');
-                $historico->INT_TELEFONE  = '61977665654';  // $request->input('INT_TELEFONE');
+    {
+       
+//             try {
+//                 $historico = new HistoricoModel;
+//                 $historico->str_nome      = $request->input('str_nome');
+//                 $historico->str_setor     = $request->input('str_setor');               
+//                 $historico->str_evento    = $request->input('str_evento');
+//                 $historico->int_fone      = $request->input('int_fone');
+//                 $historico->int_codigo    = $request->input('int_codigo');               
+//                 $historico->str_sala      = $request->input('str_sala');
+//                 $historico->str_andar     = $request->input('str_andar');
+//                 $historico->co_user       = $request->input('co_user');
+//                 $historico->str_unidade   = $request->input('str_unidade');
+//                 $historico->int_cracha = $request->input('int_cracha');
+//                 $historico->str_responsavel_entrada = $request->session()->get('usuario');
               
-                if($historico->save()) {
-                    return response()->json([
-                        //'type' => 'success',
-                        'message' => trans('info.insert_success')
-                    ]);
-                }
-            } catch(Exception $e) {
-                    return response()->json([
-                        'type' => 'danger',
-                        'message' => $e->getMessage()
-                    ]);
-            }
-        } else {
-            return response()->json([
-                'type' => 'info',
-                'message' => trans('errors.field_already_exists', ['field_name' => 'Historico'])
-            ]);
-        }
+//                 if($historico->save()) {
+//                     return response()->json([
+//                         //'type' => 'success',
+//                         'message' => trans('info.insert_success')
+//                     ]);
+//                 }
+//             } catch(Exception $e) {
+//                     return response()->json([
+//                         'type' => 'danger',
+//                         'message' => $e->getMessage()
+//                     ]);
+//             }
+
     }
 
     /**
@@ -109,19 +111,25 @@ class Historico extends Controller
      */
        
     public function update(Request $request, $id)
-    {   
-        try {
-            $date = date('Y-m-d H:i:s');
+    {
+
+         try {
+             $date = date('Y-m-d H:i:s');
             
-            $historico = HistoricoModel::findOrFail($id);
-            $historico->dt_saida = $date;
+             $historico = HistoricoModel::findOrFail($id);
+             $historico->dt_saida = $date;
+             $historico->str_nome = $request->input('str_nome');
+             $historico->int_fone = $request->input('int_telefone');
+             $historico->dt_entrada = $date;
+//             $historico->co_user = $request->input('co_user');
+//             $historico->str_responsavel_saida = $request->session()->get('usuario');
 
             if($historico->save()) {
                 return response()->json([
-                    //'type' => 'success',
+                    'type' => 'success',
                     'message' => trans('info.update_success')
                 ]);
-            }
+             }
 
         } catch(Exception $e) {
             return response()->json([
@@ -141,5 +149,5 @@ class Historico extends Controller
     {
         //
     }   
-    
+
 }

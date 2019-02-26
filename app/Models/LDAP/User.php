@@ -1,6 +1,6 @@
 <?php
 
-namespace cadvisitante\Models\LDAP;
+namespace selecao\Models\LDAP;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -28,5 +28,9 @@ class User extends Model
         }
 
         return $valores;
+    }
+    
+    public static function login($usuario, $senha) {
+        return \Adldap::authenticate($usuario, $senha);
     }
 }

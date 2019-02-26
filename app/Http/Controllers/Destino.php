@@ -46,21 +46,12 @@ class Destino extends Controller
     public function store(DestinoRequest $request)
     {
        
-        $visitante = DestinoModel::where('STR_NOME', $request->input('STR_NOME'));
+        $visitante = DestinoModel::where('str_nome', $request->input('str_nome'));
 
         if($destino->count() === 0){
 
             try {
                 $destino = new DestinoModel;
-//                $visitante->STR_NOME             = $request->input('STR_NOME');
-//                $visitante->STR_ENDERECO         = $request->input('STR_ENDERECO');               
-//                $visitante->STR_EMPRESA_ORGAO    = $request->input('STR_EMPRESA_ORGAO');
-//                $visitante->INT_TIPO_DOCUMENTO   = $request->input('INT_TIPO_DOCUMENTO');
-//                $visitante->INT_NUMERO_DOCUMENTO = $request->input('INT_NUMERO_DOCUMENTO');
-//                $visitante->INT_TELEFONE         = $request->input('INT_TELEFONE');
-//                $visitante->INT_CELULAR          = $request->input('INT_CELULAR');
-//                $visitante->INT_CRACHA           = $request->input('INT_CRACHA');   
-//                $visitante->STR_SIGLAUF          = $request->input('STR_SIGLAUF');
               
                 if($visitante->save()) {
                     return response()->json([

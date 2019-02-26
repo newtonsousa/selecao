@@ -1,3 +1,4 @@
-<div class="mdl-mini-footer__left-section">
-    Isso é um teste
+
+<div id="bgFooterLogin">
+    <div class="wrapper">CADASTRO | Versão 1.0.0</div>
 </div>

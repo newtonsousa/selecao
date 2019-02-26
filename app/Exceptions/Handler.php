@@ -1,6 +1,6 @@
 <?php
 
-namespace cadvisitante\Exceptions;
+namespace selecao\Exceptions;
 
 use Exception;
 use Symfony\Component\HttpKernel\Exception\HttpException;

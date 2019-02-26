@@ -1,6 +1,6 @@
 <?php
 
-namespace cadvisitante\Http;
+namespace selecao\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -13,11 +13,13 @@ class Kernel extends HttpKernel
      */
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
-        \cadvisitante\Http\Middleware\EncryptCookies::class,
+        \selecao\Http\Middleware\EncryptCookies::class,
         \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
         \Illuminate\Session\Middleware\StartSession::class,
         \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-        \cadvisitante\Http\Middleware\VerifyCsrfToken::class,
+        
+       // 'Illuminate\View\Middleware\ShareErrorsFromSession',
+		//'App\Http\Middleware\VerifyCsrfToken',
     ];
 
     /**
@@ -26,8 +28,10 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \cadvisitante\Http\Middleware\Authenticate::class,
+        
+        'ValidaLogin' => \selecao\Http\Middleware\ValidaLogin::class,
+        'auth' => \selecao\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'guest' => \cadvisitante\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest' => \selecao\Http\Middleware\RedirectIfAuthenticated::class,
     ];
 }

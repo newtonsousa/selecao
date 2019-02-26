@@ -1,0 +1,66 @@
+<br /><br />
+<div id="contactform">
+    <form class="form-horizontal" name="EditVisitanteForm" id="EditVisitanteForm">
+        <fieldset> 
+            <h3><strong>EDIÇÃO</strong></h3><hr>
+            <div class="form-group">        
+                <label for="str_nome" class="col-lg-2 control-label">Nome</label>
+                <div class="col-lg-4">
+                    <input class="form-control" name="str_nome" type="text" id="str_nome" ng-model="visitante.str_nome" maxlength="200" />
+                </div>
+                
+                <label for="int_telefone" class="col-lg-2 control-label">Telefone</label>
+                <div class="col-lg-2">
+                    <input class="form-control" name="int_telefone" type="text" id="int_telefone" ng-model="visitante.int_telefone" ui-mask="(99) 99999-999?9"  />
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="str_endereco" class="col-lg-2 control-label">Endereço</label>
+                <div class="col-lg-4">
+                    <input class="form-control" name="str_endereco" type="text" id="str_endereco" ng-model="visitante.str_endereco" maxlength="200"  />
+                </div>
+                
+                <label for="int_celular" class="col-lg-2 control-label">Celular</label>
+                <div class="col-lg-2">
+                    <input class="form-control" name="int_celular" type="text" id="int_celular" ng-model="visitante.int_celular" ui-mask="(99) 99999-999?9"  />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="str_empresa_orgao" class="col-lg-2 control-label">Órgão</label>
+                <div class="col-lg-4">
+                    <input class="form-control" name="str_empresa_orgao" type="text" id="str_empresa_orgao" ng-model="visitante.str_empresa_orgao" />
+                </div>
+                               
+            </div>  
+                           
+           <div class="form-group">
+                <label for="int_tipo_documento" class="col-lg-2 control-label">Tipo de documento</label>
+                <div class="col-lg-2">     
+                <input class="form-control" name="int_tipo_documento" type="text" id="int_tipo_documento" ng-model="visitante.int_tipo_documento" maxlength="25"  />             
+                </div>
+                
+                    <label for="int_numero_documento" class="col-lg-1 control-label">Número</label>
+                    <div class="col-lg-2">
+                        <input class="form-control" name="int_numero_documento" type="text" id="int_numero_documento" ng-model="visitante.int_numero_documento" ui-mask="999-999-999-99" maxlength="15" ng-required="true" />
+                    </div>
+                 
+                <div ng-if="!(visitante.INT_TIPO_DOCUMENTO == '3' || visitante.INT_TIPO_DOCUMENTO == '6')">
+                    <label for="int_codigouf" class="col-lg-1 control-label">UF</label>
+                    <div class="col-lg-2">      
+                    <input class="form-control" name="int_codigouf" type="text" id="int_codigouf" ng-model="visitante.int_codigouf" maxlength="15" ng-required="true" />                    
+                    </div> 
+                </div>
+            </div>                       
+        </fieldset>
+    </form>
+</div>
+
+<div id="contactform">
+    <div class="col-lg-10 col-lg-offset-2">
+        <button type="submit" class="btn btn-success" ng-disabled="EditVisitanteForm.$invalid" ng-click="atualizar()">Editar Visitante</button> 
+        <a href="#/visitante" class="btn btn-default">Voltar</a>
+    </div>                
+</div>
+
+

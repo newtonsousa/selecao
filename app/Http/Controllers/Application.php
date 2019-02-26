@@ -1,12 +1,12 @@
 <?php
 
-namespace cadvisitante\Http\Controllers;
+namespace selecao\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use cadvisitante\Http\Requests;
-use cadvisitante\Http\Controllers\Controller;
-use cadvisitante\Model\LDAP\User as LDAPUser;
+use selecao\Http\Requests;
+use selecao\Http\Controllers\Controller;
+use selecao\Model\LDAP\User as LDAPUser;
 
 class Application extends Controller
 {

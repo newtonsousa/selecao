@@ -83,11 +83,13 @@
             directory.source.vendor + 'angular-loading-bar/build/loading-bar.min.js',
             directory.source.vendor + 'angular-flash-alert/dist/angular-flash.min.js',
             directory.source.vendor + 'angular-animate/angular-animate.min.js',
+            directory.source.vendor + 'angular-i18n/angular-locale_pt-br.js',
             directory.source.vendor + 'angular-ui-mask/dist/mask.min.js',
             directory.source.vendor + 'angular-bootstrap/ui-bootstrap.min.js',
             directory.source.vendor + 'angular-bootstrap/ui-bootstrap-tpls.min.js',
             directory.source.vendor + 'webcamjs/webcam.min.js',
-            directory.source.vendor + 'ng-camera/dist/ng-camera.js'
+            directory.source.vendor + 'ng-camera/dist/ng-camera.js',
+            directory.source.vendor + 'angular-cookies/angular-cookies.min.js',
         ];
 
         return gulp.src(javascript)

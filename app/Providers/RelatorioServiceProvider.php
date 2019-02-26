@@ -1,8 +1,8 @@
-<?php namespace cadvisitante\Providers;
+<?php namespace selecao\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use \cadvisitante\Models\Visitante as VisitanteModel;
-use \cadvisitante\Models\Observers\Relatorio as RelatorioObserver;
+use \selecao\Models\Visitante as VisitanteModel;
+use \selecao\Models\Observers\Relatorio as RelatorioObserver;
 
 class RelatorioServiceProvider extends ServiceProvider {
 

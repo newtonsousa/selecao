@@ -1,0 +1,46 @@
+
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+</head>
+<body><br /><br />
+
+        <form class="form-horizontal" name="LoginForm" id="LoginForm">
+            <div id="sign-in" class="borda">
+                <div style="position: absolute; top: -50px;">
+                    <div style="font-size: 20px; font-family: Arial; color: #BBBBBB; padding: 0px; font-weight: bold;">Cadvisitante</div>
+                    <div style="font-size: 14px; font-family: Arial; color: #666666; padding: 0px; color: #054a86; font-weight: bold;">
+                        Sistema de Cadastro de visitantes
+                    </div>
+                </div>
+                <div class="content">
+                    <h2><strong>Acesso do Usuário</strong></h2>
+                    <input id="email" name="email" type="text" value="<?php echo e(old('email')); ?>" ng-model="credencial.email"
+                            class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+                            role="textbox" aria-disabled="false" aria-readonly="false"
+                            aria-multiline="false" placeholder="Usuário">   
+                    <input id="loginForm:password" name="password" type="password" ng-model="credencial.senha"
+                            class="ui-inputfield ui-password ui-widget ui-state-default ui-corner-all"
+                            role="textbox" aria-disabled="false" aria-readonly="false"
+                            aria-multiline="false" placeholder="Senha">
+                    <div class="wrapperBt">
+                        <button id="loginForm:submit" name="submit" ng-disabled="LoginForm.$invalid" ng-click="login()"
+                            class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left"
+                            type="submit" role="button" aria-disabled="false">
+                            <span class="ui-button-icon-left ui-icon ui-c "></span>
+                            <span class="ui-button-text ui-c">Entrar</span>
+                        </button>    
+                    </div>
+                </div>
+            </div>
+            <div id="bgCorpo" style="width: -900px; height: 790px;">
+               
+            </div>
+            <div id="bgFooterLogin">
+                <div class="wrapper">CADVISITANTE | Versão 0.0.0 - 06/10/2015 | Ministério da Integração Nacional</div>
+            </div>
+            
+	</form>
+</body>
+
+</html>
